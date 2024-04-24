@@ -1,0 +1,63 @@
+-SQL Server is a database
+-SQL Server is most often going to be run on an actual server, hence the name
+-The only real difference between a server and a regular desktop is that servers are meant to be communicated with over networks
+-SQL Server Management Studio is the client to SQL Server, back in the day the interaction to the server was done via the command line now we can use a GUI such as SQL Server Management Studio to handle this for us
+-clients are tools or entities that interface with a server to request services or resources
+-servers are primarily designed to serve resources or services to other computers or users over a network. They are optimised to handle requests from multiple clients simulataneously
+-databases are basically excel spreadsheets that can be tied together though keys. 
+-databases can hold 100s of tables which can be connected together and manipulated through SQL queries
+-a database is a bucket of tables which are spreadsheets
+-schemas is a way to logically group our tables
+-PRIMARY KEYS are unique numbers that uniquely identidy each record in a table. Each table has to have one
+-VARCHAR - variable length string of characters
+-CHAR - fixed length string of characters. It is two times as fast as VARCHAR so use if possible
+-constraint just means a rule for your data ie: NOT NULL, values in this column cannot be null
+-the IDENTITY keyword will enable the column to auto increment
+-we dont need to add id when inserting data when doing the operation via a script, it will be done automatically
+-always use single quotes in SQL Server
+-two ways to exec sql queries: script or GUI
+-99% of the time we use the SELECT statement with the FROM statement. We are selecting a column from a table
+-we use the brackets in our SQL Queries for name aliasing
+-we cannot have spaces in SQL server
+-the WHERE clause is basically a data filter. You are basically searching data
+-AND comes before OR in precedence, we can use parethesis to enforce precedence
+-The LIKE operater in SQL is like a pattern matching operator
+-we can use ORDER BY for sorting ie: ascending or decending. A lot of the time this is done by dates or prices
+-simplicity in programming and db design is beauty, so always err towards simplicity
+-we can take a bad db design and make it a good db design through normalization. Db normalization is how we simply and increase the efficiency of the design
+-db normalization: we are eliminating redundancy. Redundancy will degrade performance and data integrity of db
+-look out for redundency in our columns and records, if we see a lot of redundency then we should look to normalizing the tables and spliting them up into different tables
+-when splitting up tables for better design we should lok at the relationships, is it one or many to many
+-we use foriegn keys to link up tables
+-we use primary keys to make sure records are unique
+-one to many is the most common relationship that we are going to see
+-to establish a many to many relationship we need a join table or "intermediatery table" to join two other tables
+-candidate key: unique but not a primary key ie: email, ssn, isbn - there can be more than on candidate key in a table. The way we declare a candidate key in a table is to just give it the unique constraint along with the constraint keyword
+-primary key: left most column and the column that uniquely identifies a record, should not be null and each table can have many keys but should only have one primary key. A typical naming convention is that it contains the table name followed by the id ie: product_id. The primary key is what ties together the foreign keys. This is created in a table using the IDENTITY keyword which auto increments the number for us by 1
+-Foreign Keys: Links db tables together and has a parent -> child relationship. The parent is the table that contains the foriegn key and the child is the other table itself or in other words the parent table is the source of the reference and the child table the destination of that reference. Foreign keys reference other tables
+-it is fairly common to have multiple foreign keys in a single table
+-parent and child relationship of primary -> forign keys. There can only be one parent, but it can have multiple children
+-we use the REFERENCES keyword when we use foreign keys
+-JOINS allow us to pull data very robustly
+-when you see 'id' in a column name in a table, it is very likely that that is either a foreign or primary key
+-table inner joins are most common and used to combine data from two or more tables based on a related column between them
+-with joins we tend to use aliases for the syntax
+-we can join more than two tables with SQL
+-the only difference between an inner join and a left join is that the left table shows all the data but what doesnt match in the right table shows up as null
+-right joins are essentially the same as left joins but on the right hand side
+-the left table is the first one that we call and the right one is the one after the join 
+-with an inner join the computer is going to try to slam the tables together based on their common data
+-inner joins toss out the data that is not common but left and right joins keep the data in their respective side
+-on 99% of cases joins are done on the primary or foreign key
+-when we do an aggregate we are going to do a sum, average, count, max or min of a set of rows of a column - these are all aggregate functions that are applied to a set of rows in a column
+-GROUP BY and HAVING clauses, split, apply (aggregate function) and combine the relvant records
+-HAVING, is pretty much the WHERE clause of GROUP BY it is similar to the where clause, where it acts as a filter. We use having because we cannot have aggregate functions is a WHERE clause
+
+
+up 2: 16/16
+
+
+-officeworks A4
+-final testing of APP
+-go to nrth sydney
+-go casino
